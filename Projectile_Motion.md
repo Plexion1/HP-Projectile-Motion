@@ -1,8 +1,9 @@
+```
 EXPORT Projectile_Motion()
 BEGIN
 LOCAL Launch_Velocity, Launch_Angle, Launch_Height, Final_Height, X_Position, Time, g;
 // Acceleration due to gravity
-g := 9.803; // Default value for Earth's gravity in m/s²
+g := 9.803; // Default value for Earth's gravity in m/sÂ²
 
 // Input variables
 Launch_Velocity := 0; // Initial launch velocity in m/s
@@ -13,12 +14,12 @@ X_Position := 0; // Final X position in meters
 
 INPUT({Launch_Velocity, Launch_Angle, Launch_Height, Final_Height, g},
 "Projectile Motion Inputs",
-{"Initial Velocity (m/s)", "Launch Angle (degrees)", "Launch Height (meters)", "Final Height (meters)", "Gravity (m/s²)"},
+{"Initial Velocity (m/s)", "Launch Angle (degrees)", "Launch Height (meters)", "Final Height (meters)", "Gravity (m/sÂ²)"},
 {"Enter the initial launch velocity (m/s)",
 "Enter the launch angle (degrees)",
 "Enter the launch height (meters)",
 "Enter the final height (meters)",
-"Enter the acceleration due to gravity (m/s²)"});
+"Enter the acceleration due to gravity (m/sÂ²)"});
 
 Time := (-Launch_Velocity * sin(Launch_Angle) - sqrt((Launch_Velocity * sin(Launch_Angle))^2 - 4 * (0.5 * -g) * (Launch_Height - Final_Height))) / -g;
 
@@ -29,3 +30,4 @@ MSGBOX("Results:" +
 "\nFinal X position: " + X_Position + " meters" +
 "\nTime of flight: " + Time + " seconds");
 END;
+```
